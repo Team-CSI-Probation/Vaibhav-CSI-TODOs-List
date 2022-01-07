@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">TODOs List</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -164,16 +164,7 @@
                 update();
 
             }
-            function completed_task(itemIndex){
-                console.log("Completed", itemIndex);
-                itemJsonArrayStr = localStorage.getItem('itemsJson')
-                itemJsonArray = JSON.parse(itemJsonArrayStr);
-                // Delete itemIndex element from the array
-                itemJsonArray.splice(itemIndex, 1);
-                localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
-                update();
-
-            }
+            
             function clearStorage(){
                 if (confirm("Do you areally want to clear?")){
                 console.log('Clearing the storage')
